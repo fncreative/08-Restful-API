@@ -1,44 +1,6 @@
 ![cf](https://i.imgur.com/7v5ASc8.png) Lab 08: Vanilla REST API
 ======
 
-## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Create a PR to your master from your working branch.
-* Ensure that your repository/branch is connected to travis-ci.com
-* Ensure that your repository/branch is connected to a dyno at heroku.com
-* Heroku and Travis should pick you up and deploy
-* Submit on canvas:
-  * a question and observation
-  * how long you spent
-  * link to your pull request
-  * link to your build at travis-ci URL
-  * Heroku Server URL
-
-## Learning Objectives  
-* students will learn to use promise constructs to manage asynchronous code
-* students will learn to create a vanilla RESTful API with in-memory persistence
-
-## Requirements
-
-## Configuration 
-Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation
-* **.env** - contains env variables (should be git ignored)
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course linter configuratoin
-* **.eslintignore** - contains the course linter ignore configuration
-* **.travis.yml** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint (eslint **/*.js)
-  * create a `test` script for running tests
-  * create a `start` script for running your server
-* **index.js** - the entry point for your application
-* **src/** - contains your core application files and folders
-* **src/app.js** - (or main.js) contains your core application bootstrap
-* **src/lib/** - contains module definitions
-* **\_\_test\_\_/** - contains unit tests
-
 #### Feature Tasks
 * create the following directories to organize your code:
   * `lib`
@@ -54,7 +16,7 @@ Configure the root of your repository with the following files and directories. 
 * create a storage module that will store resources by their schema type (ex: note) and id
 
 ## Server Endpoints
-### `/api/simple-resource-name`
+### `/api/buildaburger`
 * `POST` request
  * pass data as stringifed JSON in the body of a **POST** request to create a new resource
 * `GET` request
@@ -73,4 +35,9 @@ Configure the root of your repository with the following files and directories. 
  * `GET`: test 200, it should contain a response body for a request made with a valid id
  * `POST`: test 400, it should respond with 'bad request' if no request body was provided or the body was invalid
  * `POST`: test 200, it should respond with the body content for a post request with a valid body
+ 
+ ## Author
+ Daniel Frey
+ ## Version
+ 1.0
 
