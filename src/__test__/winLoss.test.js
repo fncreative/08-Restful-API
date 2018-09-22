@@ -3,7 +3,7 @@
 const superAgent = require('superagent');
 const server = require('../lib/server');
 
-describe('/api/WinLoss', () => {
+describe('/api/winloss', () => {
   beforeAll(server.start);
 
   test('should respond with 200 status code and a new json game record', () => {
@@ -36,5 +36,19 @@ describe('/api/WinLoss', () => {
       .catch((response) => {
         expect(response.status).toEqual(400);
       });
+  });
+  describe('this will test the get methods and the subsequent responses', () => {
+    test('this should respond with 200 OK', () => {
+      return superAgent.get('http://localhost:3000/api/winloss')
+        .then((response) => {
+          expect(response.status).toEqual(200);
+        });
+    });
+    test('this should response with 200 OK insomuch as the path and query are both valid', () => {
+      return superAgent.get('http://localhost:3000/api/winloss?awayTeam=Seahawks')
+        .then((response) => {
+          expect(response.status).toEqual(200);
+        });
+    });
   });
 });
